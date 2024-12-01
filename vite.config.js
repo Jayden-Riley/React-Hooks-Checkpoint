@@ -1,8 +1,10 @@
-import { vitePlugin as remix } from "@remix-run/dev";
 import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import { vitePlugin as remix } from "@remix-run/dev"; // Correct import
 
 export default defineConfig({
   plugins: [
+    react(),
     remix({
       future: {
         v3_fetcherPersist: true,
